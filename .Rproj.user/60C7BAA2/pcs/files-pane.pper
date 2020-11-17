@@ -1,9 +1,13 @@
 {
-    "path" : "~/Desktop/Docs/sciExpertiseHRAFdb/data-raw",
+    "path" : "~/Desktop/Docs/sciExpertiseHRAF/data",
     "sortOrder" : [
         {
             "ascending" : true,
             "columnIndex" : 2
+        },
+        {
+            "ascending" : false,
+            "columnIndex" : 4
         }
     ]
 }
