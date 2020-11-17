@@ -1,0 +1,61 @@
+c_cultural_complexity,c_culture_code,c_latitude,c_longitude,c_name,c_region,c_subregion,c_subsistence_code,c_subsistence_type
+34,FE12,7,-1.5,Akan,Africa,Western Africa,4,horticulturalists
+42,MP05,10.5,38,Amhara,Africa,Eastern Africa,5,intensive agriculturalists
+14,AZ02,12,92.74,Andamans,Asia,South Asia,1,foragers
+13,OI08,-24,133.5,Aranda,Oceania,Australia,1,foragers
+34,SF05,-16,-65.8,Aymara,South America,Central Andes,4,horticulturalists
+31,FO07,4.5,21.5,Azande,Africa,Central Africa,4,horticulturalists
+NA,SO11,12.5,-39,Bahia Brazilians ,South America,Eastern South America,5,intensive agriculturalists
+28,FQ05,-10.5,30.5,Bemba,Africa,Southern Africa,4,horticulturalists
+18,NF06,55,-115,Blackfoot,North America,Plains and Plateau,1,foragers
+NA,SP08,-16.5,-55,Bororo,South America,Eastern South America,1,foragers
+50,AO07,13.5,102,Central Thai ,Asia,Southeast Asia,5,intensive agriculturalists
+18,RY02,66.5,180.0,Chukchee,Asia,North Asia,3,pastoralists
+28,OR19,7.18,151.72,Chuuk,Oceania,Micronesia,7,other
+16,ND08,69,-111.5,Copper Inuit,North America,Arctic and Subarctic,1,foragers
+36,FA16,14.13,-2.75,Dogon,Africa,Western Africa,5,intensive agriculturalists
+28,OG11,-1.75,121,Eastern Toraja,Asia,Southeast Asia,4,horticulturalists
+37,FK07,.5,33,Ganda,Africa,Eastern Africa,5,intensive agriculturalists
+31,AR05,25.59,90.43,Garo,Asia,South Asia,4,horticulturalists
+16,SM04,-23.5,-55,Guarani,South America,Eastern South America,7,other
+43,MS12,12.5,8,Hausa,Africa,Western Africa,7,other
+47,ES10,56,-5,Highland Scots,Europe,British Isles,7,other
+NA,NT09,35.5,-110.5,Hopi,North America,Southwest and Basin,5,intensive agriculturalists
+23,OC06,2,113,Iban,Asia,Southeast Asia,4,horticulturalists
+31,OA19,16.83,121.17,Ifugao,Asia,Southeast Asia,5,intensive agriculturalists
+15,NM09,43,-75,Iroquois,North America,Eastern Woodlands,4,horticulturalists
+29,MS14,12,12.25,Kanuri,Africa,Western Africa,5,intensive agriculturalists
+29,OJ29,3.68,136.13,Kapauku,Oceania,Melanesia,5,intensive agriculturalists
+NA,AR07,25.8,91.5,Khasi,Asia,South Asia,7,other
+14,NR10,42.5,-121.5,Klamath,North America,Plains and Plateau,1,foragers
+NA,SC07,11,-73,Kogi,South America,Northwestern South America,4,horticulturalists
+48,AA01,33.06,128.03,Korea,Asia,East Asia,5,intensive agriculturalists
+33,SB05,9.25,-78.5,Kuna,Middle America and the Caribbean,Central America,4,horticulturalists
+43,MA11,36.5,44.5,Kurds,Middle East,Middle East,3,pastoralists
+32,OQ06,-18.87,-179.27,Lau Fijians,Oceania,Polynesia,7,other
+NA,MT09,26,24,Libyan Bedouin ,Africa,Northern Africa,3,pastoralists
+30,FQ09,-15.25,23,Lozi,Africa,Southern Africa,7,other
+19,FL12,-3.5,36.75,Maasai,Africa,Eastern Africa,3,pastoralists
+NA,SI07,-24,-60,Mataco,South America,Southern South America,2,forager/food producers
+10,FO04,1.5,28.5,Mbuti,Africa,Central Africa,1,foragers
+20,NG06,52.0,-95.5,Ojibwa,North America,Arctic and Subarctic,1,foragers
+NA,SH04,-54.5,-67.5,Ona,South America,Southern South America,1,foragers
+25,NQ18,42.0,-100.0,Pawnee,North America,Plains and Plateau,2,forager/food producers
+18,EP04,65,21.5,Saami,Europe,Scandinavia,3,pastoralists
+31,AW42,23.25,85.5,Santal,Asia,South Asia,5,intensive agriculturalists
+26,SR15,3,-56,Saramaka,South America,Amazon and Orinoco,7,other
+36,EF06,43.5,21.25,Serbs,Europe,Southeastern Europe,5,intensive agriculturalists
+42,MW11,30.5,-8,Shluh,Africa,Northern Africa,5,intensive agriculturalists
+NA,AX04,7.89,84.38,Sinhalese,Asia,South Asia,5,intensive agriculturalists
+28,MO04,5,46.21,Somali,Africa,Eastern Africa,3,pastoralists
+27,AD05,24,121,Taiwain Hokkien,Asia,East Asia,5,intensive agriculturalists
+28,NU33,28,-107,Tarahumara,Middle America and the Caribbean,Northern Mexico,6,pastoral/agriculturalists
+28,OT11,-12.3,168.83,Tikopia,Oceania,Polynesia,4,horticulturalists
+29,FF57,7,9,Tiv,Africa,Western Africa,4,horticulturalists
+22,NA12,57.34,-133,Tlingit,North America,Northwest Coast and California,1,foragers
+26,OL06,-8.5,151,Trobriands,Oceania,Melanesia,4,horticulturalists
+20,SQ19,.5,-70,Tukano,South America,Amazon and Orinoco,7,other
+29,NV09,16.5,-92.5,Tzeltal,Middle America and the Caribbean,Maya Area,4,horticulturalists
+39,MS30,14.84,-14.5,Wolof,Africa,Western Africa,4,horticulturalists
+17,RV02,63.5,129.5,Yakut,Asia,North Asia,7,other
+18,SQ18,2,-65,Yanoama,South America,Amazon and Orinoco,4,horticulturalists

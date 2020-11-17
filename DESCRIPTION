@@ -1,0 +1,12 @@
+Package: sciExpertiseHRAF
+Type: Package
+Title: Cross-cultural ethnographic data on scientific expertise
+Version: 0.1.0
+Author: Aaron Lightner
+Maintainer: Aaron Lightner <alightner2@gmail.com>
+Description: The data package included here includes publicly available coded data collected from the Human Relations Area Files (HRAF).
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
