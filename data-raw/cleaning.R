@@ -1,5 +1,6 @@
 library(tidyverse)
 library(tidytext)
+library(stringr)
 library(textstem)
 library(readxl)
 library(devtools)
@@ -48,6 +49,31 @@ for(i in 1:length(years)){
 }
 cite_df$year <- years
 cite_df$decade <- decades
+
+# authorship --------------------------------------------------------------
+
+authsplit <- stringr::str_split(cite_df$citation, regex('[:digit:]{4}'))
+# stringr::str_split(authsplit, '-/')
+authnames <- unlist(lapply(authsplit, function(x) x[1]))
+authnames[240] <- "LeBar, Frank M."
+authnames[206] <- "Marshall, Donald Stanley."
+authnames[187] <- "Textor, Robert B."
+authnames[181] <- "Hauck, Hazel Marie"
+authnames[163] <- "Ames, David W."
+authnames[158] <- "Smith, M. G. (Michael Garfield)"
+authnames[76] <- "Marshall, Donald Stanley."
+authnames[58] <- "Kemp, Jeremy"
+authnames[33] <- "Akiga, Rupert East"
+
+cite_df$authors <- authnames
+  
+# you left off here
+stringr::str_split(authnames, ' and ')
+
+# # add to citedata?
+# first_author_lastname <- strsplit(cite_df$citation, split=',')
+# #substr(cite_df$citation, start=1, stop=which regex('[:digit:]{4}'))
+# strsplit(cite_df$citation, split='')
 
 # splitting up the main df into shapes ------------------------------------
 # reshaping multiple character vectors into unique data tables
