@@ -21,7 +21,7 @@ reshapeDF <- function(x, df)
     idvec <- c(idvec, rep(df$textid[i], length(y)))
   }
   outab <- data.frame(idvec, colvec, stringsAsFactors=FALSE)
-  colnames(outab) <- c('id', x)
+  colnames(outab) <- c('textid', x)
   return(outab)
 }
 

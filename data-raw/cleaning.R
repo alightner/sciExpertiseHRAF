@@ -133,6 +133,80 @@ culture_df <- culture_df %>%
 # culture_df <- culture_df %>% left_join(d2, by='culture_id')
 # out of curiosity: culture_df %>% select(culture, repro_skew)
 
+# iterating through added SCCS vars ---------------------------------------
+
+var_list <- read_csv('SCCS-addons.csv')
+var_list <- var_list$codes
+
+var_name_list <- c(
+  'pathogen_stress',
+  'intercommunity_trade_food',
+  'subsistence_change',
+  'writing_records',
+  'fixity_residence',
+  'urbanization',
+  'technology_specialization',
+  'pop_density',
+  'political_integration',
+  'social_stratification',
+  'mechanical_transport',
+  'water_transport',
+  'roads_highways',
+  'change_education',
+  'foreign_med_practices',
+  'foreign_disease_concepts',
+  'change_traditional_religion',
+  'foreign_religion',
+  'change_burial_rituals',
+  'food_storage',
+  'food_storage_surplus',
+  'inheritance_rule_land',
+  'inheritance_rule_movable',
+  'deep_islam_christian',
+  'log10_popsize',
+  'avg_popsize',
+  'evil_eye_belief',
+  'evil_eye_rating',
+  'fear_ghosts',
+  'fear_ghosts_rating',
+  'christian_influence',
+  'world_religion',
+  'societal_rigidity',
+  'high_gods',
+  'ritual_war',
+  'leadership_wealth',
+  'theory_infection',
+  'theory_stress',
+  'theory_deterioration',
+  'theory_accident',
+  'theory_fate',
+  'theory_ominous_feel',
+  'theory_contagion',
+  'theory_mystic_retribution',
+  'theory_soul_loss',
+  'theory_spirit_aggression',
+  'theory_sorcery',
+  'theory_witchcraft',
+  'shaman',
+  'shaman_healer',
+  'healer',
+  'medium',
+  'sorcerer_witch',
+  'priest'
+)
+
+# names: names(var_list)
+# keys: as.character(var_list)
+# function(sccs_var, var_name, scdf, culture_codes)
+
+for(i in 1:length(var_list)){
+  culture_df <- culture_df %>% 
+    left_join(
+      sccs_pull(sccs_var=var_list[i], var_name=var_name_list[i], scdf, culture_codes),
+      by='culture_id'
+    )
+}
+
 # adding vars to culture df (alt approach) --------------------------------
 # sccs$SOCNAME[sccs.nums]
 # # NOTE: migrate after finishing in dplace data directory
@@ -294,6 +368,4 @@ usethis::use_data(culture_key, overwrite=TRUE)
 usethis::use_data(docterm, overwrite=TRUE)
 usethis::use_data(texrec_length, overwrite=TRUE)
 usethis::use_data(expert_words, overwrite=TRUE)
-
-
 
