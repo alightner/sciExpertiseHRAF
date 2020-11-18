@@ -348,13 +348,134 @@ docterm <-
     -(`10`:a.n)
   )
 
+# expanding numeric to explicitly code certain categoricals ---------------
+# colnames(df)[sapply(df, is.character)]
+## sex, age, etc.
+df$male <- 0
+df$male[df$sex=='male' | df$sex=='either/both'] <- 1
+df$female <- 0
+df$female[df$sex=='female' | df$sex=='either/both'] <- 1
+
+df$case <- 0
+df$model <- 0
+df$case[df$case_model=='case'] <- 1
+df$model[df$case_model=='model'] <- 1
+
+
+# split main df to numeric here -------------------------------------------
+
+# num_df <- df   # NOTE: split df to numeric version here?
+# still undecided if this is the best approach
+data <- df
+
+# starting iterations on cats to numeric ----------------------------------
+
+## First: setting up names to iterate over
+
+# Age variables to numeric cols
+agelist <- names(table(age_data$age))
+names(agelist) <- agelist
+names(agelist)[names(agelist)=='older/middle-aged'] <- 'middleaged'
+names(agelist) <- paste0("age_",names(agelist))
+
+# Patronage basis to numeric cols
+patronlist <- names(table(patron_data$patronage_based_cat))
+names(patronlist) <- patronlist
+names(patronlist) <- unlist(lapply(strsplit(names(patronlist), split=' '), 
+                                   function(x) paste0(x, collapse='_')))
+names(patronlist) <- paste0('patron_', names(patronlist))
+
+# Prescribes behavior
+prescribelist <- names(table(prescribed_data$prescribed_behavior_cat))
+names(prescribelist) <- prescribelist
+names(prescribelist) <- unlist(lapply(strsplit(names(prescribelist), split=c(' ')), 
+                                      function(x) paste0(x, collapse='_')))
+names(prescribelist) <- unlist(lapply(strsplit(names(prescribelist), split=c('/')), 
+                                      function(x) paste0(x, collapse='_')))
+names(prescribelist)[names(prescribelist)=='auspicious_behavior'] <- 'auspicious'
+names(prescribelist)[names(prescribelist)=='sharing_behavior'] <- 'sharing'
+names(prescribelist) <- paste0('prescribe_', names(prescribelist))
+
+# How learned domain of expertise
+learnlist <- names(table(learning_data$how_learned))
+names(learnlist) <- unlist(lapply(
+  strsplit(learnlist, split=' '), function(x){
+    if("(misc.)" %in% x) x <- x[1]
+    paste0(x, collapse='_')
+  }
+))
+names(learnlist) <- unlist(lapply(
+  strsplit(names(learnlist), split='/'), function(x) paste0(x, collapse='_')
+))
+names(learnlist) <- paste0('learned_', names(learnlist))
+
+# How experts gained their status as expert
+statlist <- names(table(status_data$how_gained_status))
+names(statlist) <- unlist(lapply(
+  strsplit(statlist, split=' '), function(x) paste0(x, collapse='_')
+))
+names(statlist) <- unlist(lapply(
+  strsplit(names(statlist), split='/'), function(x) paste0(x, collapse='_')
+))
+names(statlist) <- paste0('status_', names(statlist))
+# prescribed, patronage basis, learned, status
+
+## Second: iterating over those name lists
+
+# Age iteration
+#df$child <- convertCatNumeric(cat_name='child', cat_var='age', cat_data=age_data, df)
+tmp2 <- data.frame(matrix(NA, nrow=nrow(df), ncol=length(agelist)))
+for(i in agelist){
+  tmp2[which(agelist==i)] <- convertCatNumeric(cat_name=i, cat_var='age', cat_data=age_data, df)
+}
+colnames(tmp2) <- names(agelist)
+df <- cbind(df, tmp2)
+
+
+# Patronage basis to numeric cols
+tmp2 <- data.frame(matrix(NA, nrow=nrow(df), ncol=length(patronlist)))
+for(i in patronlist){
+  tmp2[which(patronlist==i)] <- convertCatNumeric(cat_name=i, cat_var='patronage_based_cat', cat_data=patron_data, df)
+}
+colnames(tmp2) <- names(patronlist)
+df <- cbind(df, tmp2)
+
+
+# Prescribes behavior
+tmp2 <- data.frame(matrix(NA, nrow=nrow(df), ncol=length(prescribelist)))
+for(i in prescribelist){
+  tmp2[which(prescribelist==i)] <- convertCatNumeric(cat_name=i, cat_var='prescribed_behavior_cat', cat_data=prescribed_data, df)
+}
+colnames(tmp2) <- names(prescribelist)
+df <- cbind(df, tmp2)
+
+
+# How learned domain of expertise
+tmp2 <- data.frame(matrix(NA, nrow=nrow(df), ncol=length(learnlist)))
+for(i in learnlist){
+  tmp2[which(learnlist==i)] <- convertCatNumeric(cat_name=i, cat_var='how_learned', cat_data=learning_data, df)
+}
+colnames(tmp2) <- names(learnlist)
+df <- cbind(df, tmp2)
+
+
+# How experts gained their status as expert
+tmp2 <- data.frame(matrix(NA, nrow=nrow(df), ncol=length(statlist)))
+for(i in statlist){
+  tmp2[which(statlist==i)] <- convertCatNumeric(cat_name=i, cat_var='how_gained_status', cat_data=status_data, df)
+}
+colnames(tmp2) <- names(statlist)
+df <- cbind(df, tmp2)
+
+
 # overwrite with usethis --------------------------------------------------
 
-data <- df
+long_data <- df
 cite_data <- cite_df
 culture_data <- culture_df
 
 usethis::use_data(data, overwrite=TRUE)
+usethis::use_data(long_data, overwrite=TRUE)
 usethis::use_data(cite_data, overwrite=TRUE)
 usethis::use_data(culture_data, overwrite=TRUE)
 usethis::use_data(text_data, overwrite=TRUE)

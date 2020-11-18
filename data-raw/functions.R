@@ -55,3 +55,12 @@ sccs_pull <- function(sccs_var, var_name, scdf, culture_codes)
   return(d2)
   #culture_df <- culture_df %>% left_join(d2, by='culture_id')
 }
+
+convertCatNumeric <- function(cat_name, cat_var, cat_data, df)
+{
+  # example input: df, cat_data=patron_data, cat_var='patronage_based_cat', cat_name='convenience'
+  x <- rep(0, nrow(df)); txid <- df$textid
+  c_ids <- cat_data['textid'][cat_data[cat_var]==cat_name]
+  x[txid %in% c_ids] <- 1
+  return(x)
+}
