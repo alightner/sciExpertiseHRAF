@@ -9,6 +9,13 @@ rm(list=ls())
 # source('database.R')
 source('functions.R')
 
+# change name from data (coding, expert_coding)
+# separate categorical wide from full wide (remove from the current full wide)
+# change name to wide_data  
+# single key dataframe?
+# divide by number cells per matrix -- model culture score function
+
+
 # reading main data -------------------------------------------------------
 df <- read_csv('AL-coded-dataset.csv')
 text_data <- read_delim('raw-text-data.tsv', delim=" ")
