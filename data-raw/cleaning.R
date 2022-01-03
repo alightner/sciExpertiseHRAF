@@ -4,18 +4,11 @@ library(stringr)
 library(textstem)
 library(readxl)
 library(devtools)
-# setwd('data-raw')
 rm(list=ls())
 source('functions.R')
 
-# >change name from data (coding, expert_coding)
-# >separate categorical wide from full wide (remove from the current full wide)
-# >change name to wide_data  
-# >single key dataframe?
-# divide by number cells per matrix -- model culture score function
-
 # reading main data -------------------------------------------------------
-df <- read_csv('AL-coded-dataset.csv')
+df <- read_csv('coded-dataset.csv')
 text_data <- read_delim('raw-text-data.tsv', delim=" ")
 
 # culture data ------------------------------------------------------------
@@ -58,7 +51,6 @@ cite_df$decade <- decades
 # authorship --------------------------------------------------------------
 
 authsplit <- stringr::str_split(cite_df$citation, regex('[:digit:]{4}'))
-# stringr::str_split(authsplit, '-/')
 authnames <- unlist(lapply(authsplit, function(x) x[1]))
 authnames[240] <- "LeBar, Frank M."
 authnames[206] <- "Marshall, Donald Stanley. "
@@ -70,11 +62,7 @@ authnames[76] <- "Marshall, Donald Stanley. "
 authnames[74] <- "Kemp, P. "
 authnames[58] <- "Kemp, Jeremy"
 authnames[33] <- "Akiga, Rupert East"
-#"Kemp, P., University Of London, and School Of Slavonic And East European Studies. "
 cite_df$authors <- authnames
-
-# you left off here
-# stringr::str_split(authnames, ', and ')  # for three or more authors?
 
 cite_df$author_id <- NA
 ind <- 1
@@ -84,20 +72,8 @@ for(i in unique(cite_df$authors)){
   ind <- ind+1
 }
 
-# # add to citedata?
-# first_author_lastname <- strsplit(cite_df$citation, split=',')
-# #substr(cite_df$citation, start=1, stop=which regex('[:digit:]{4}'))
-# strsplit(cite_df$citation, split='')
-
 # splitting up the main df into shapes ------------------------------------
 # reshaping multiple character vectors into unique data tables
-# colnames(df)[sapply(df, function(x) !is.numeric(x))]
-# [1] "textid"                  "culture_id"             
-# [3] "citation_id"             "case_model"             
-# [5] "sex"                     "disability"             
-# [7] "domain"                  "age"                    
-# [9] "how_learned"             "how_gained_status"      
-# [11] "patronage_based_cat"     "prescribed_behavior_cat"
 
 domain_data <- reshapeDF('domain', df)
 age_data <- reshapeDF('age', df)
@@ -145,33 +121,11 @@ cdvar <-
   )
 scdf <- scdf %>% left_join(cdvar, by='var_id')
 
-## reproductive skew (from dplace.org):
-# Percentage of Married Women Polygynously Married 
-# (Share Husband with One or More Co-wives) [SCCS872]
-# White, D. R. (1986). Forms and frequencies of polygyny: Standard Sample codes. World Cultures 2(2).
-
-# NOTE: extensible/revisions can be made with sub char vector for 872 var
-# BUT a function would need to iterate lines below unless code is restructured
-# 11/17 UPDATE: wrote the function, but testing it out. might still need to iterate over sccs vars
-
-# function(sccs_var, var_name, scdf, culture_codes)
 culture_df <- culture_df %>% 
   left_join(
     sccs_pull(sccs_var='SCCS872', var_name='repro_skew', scdf, culture_codes),
     by='culture_id'
   )
-
-# d2 <- as_tibble(scdf[scdf$var_id=='SCCS872',]) 
-# d2 <- d2[d2$soc_id %in% culture_codes$sccs_id,] %>% 
-#   dplyr::select(
-#     sccs_id=soc_id,
-#     #sccs_year=year,
-#     'repro_skew'=code    # if a function is written, be sure colnames are accounted for
-#   ) %>% 
-#   left_join(culture_codes, by='sccs_id')
-# 
-# culture_df <- culture_df %>% left_join(d2, by='culture_id')
-# out of curiosity: culture_df %>% select(culture, repro_skew)
 
 # iterating through added SCCS vars ---------------------------------------
 
@@ -235,10 +189,6 @@ var_name_list <- c(
   'priest'
 )
 
-# names: names(var_list)
-# keys: as.character(var_list)
-# function(sccs_var, var_name, scdf, culture_codes)
-
 for(i in 1:length(var_list)){
   culture_df <- culture_df %>% 
     left_join(
@@ -247,91 +197,13 @@ for(i in 1:length(var_list)){
     )
 }
 
-# adding vars to culture df (alt approach) --------------------------------
-# sccs$SOCNAME[sccs.nums]
-# # NOTE: migrate after finishing in dplace data directory
-# load('sccs.RData')
-# sccs <- as.data.frame(sccs, stringsAsFactors=FALSE)
-# # ID's of SCCS cultures that correspond to HRAF probability sample cultures
-# sccs_nums <- c(19,37,79,172,28,7,140,76,121,109,124,24,87,12,69,181,26,51,149,85,112,125,16,94,138,116,158,57,102,4,34,182,13,127,52,62,165,48,42,36,113,152,100,16,132,98,167,154,21,120)
-# ## adding variables SCCS variables
-# sccs_vars <- c('SOCNAME','V61','V63', 'V64', 'V69','V70', 'V73', 'V76', 'V77',  'V79',
-#                'V80', 'V81', 'V83', 'V84', 'V85', 'V93', 'V94', 'V156', 'V158', 'V158.1',
-#                'V207', 'V208', 'V210', 'V234', 'V235', 'V236', 'V247', 'V270', 'V276',
-#                'V573', 'V574', 'V575', 'V587', 'V666', 'V669', 'V670', 'V679',
-#                'V756', 'V758', 'V759', 'V760', 'V761', 'V762', 'V763', 'V764', 'V765', 'V766', 'V767',
-#                'V768', 'V769', 'V770', 'V773', 'V774', 'V775', 'V777', 'V778', 'V780', 'V785', 'V793', 'V794',
-#                'V795', 'V796', 'V835', 'V836', 'V860', 'V866', 'V867', 'V868', 'V869', 'V872', 'V902', 'V903', 'V905',
-#                'V907', 'V910', 'V1133', 'V1134', 'V1648', 'V1683', 'V1684', 'V1685')
-# sccs2 <- sccs[sccs_nums, sccs_vars]
-# culture_codes <- read.delim("Culture codes.txt", stringsAsFactors=FALSE)
-# sccs2 <- merge(sccs2, culture_codes, by.x='row.names', by.y='SCCS')
-# 
-# # cultures <- read.delim("data-raw/cultures.txt")
-# # cultures = merge(cultures, sccs.2, by='Culture.code', all=T)
-# # rm(sccs.2)
-# 
-# ##d uses "c_culture_code", cultures uses "Culture.code" -- only two differences, e.g. two groups in PSF not in SCCS
-# cultures$c_culture_code<-cultures$Culture.code
-# 
-# 
-# ## Isolating variables for MA focus
-# ## Prestige/Dominance variables, VV variables, Neel variables (*d3 is main extract level data frame
-# ##ORIGINAL CODE#d3 = d[,c(1:12, 27:35, 51:54, 61:67, 79:80)]
-# 
-# #d3<-d[,c(1:12,27:35,68,69,66,67,74:80,57,58)]
-# 
-# 
-# # Rows that are all zero on study variables == 1
-# # a=0
-# # for (i in 1:nrow(d3)){a[i] = 1*(sum(abs(d3[i,14:34]))==0)}
-# # d3$all.zero = a
-# # d4 = d3[d3$all.zero!=1,]
-# 
-# d$c_cultural_complexity <-as.numeric(d$c_cultural_complexity)
-# 
-# ## Recode 0 to -1, and -1 to 0
-# tmp = as.matrix(d[,14:37])
-# tmp[tmp==0] = -2
-# tmp[tmp==-1] = 0
-# tmp[tmp==-2] = -1
-# d[,14:37] = tmp
-# rm(tmp)
-# 
-# 
-# ##Culture level data
-# 
-# # Try to replicate d.ct in R
-# # PSF has Bahia Brazilians, but no leadership extracts from that culture, so delete that row
-# 
-# d.ct <-
-#   read.csv('data-raw/culture_fmpro2.csv', stringsAsFactors=F) %>%
-#   filter(c_name != 'Bahia Brazilians ') %>%  # Not in d
-#   left_join(as.data.frame(table(d$c_name), stringsAsFactors = F), by=c('c_name'='Var1')) %>%
-#   rename(extract_count = Freq)
-# 
-# 
-# 
-
 # computing model scores for culture level --------------------------------
+## For details on model definitions, see the Lightner et al. (2021) paper 
+## in the alightner/conceptualExpertsHRAF repo
 
 culture_key <- data.frame(culture=culture_df$culture,
                           culture_id=culture_df$culture_id,
                           stringsAsFactors=FALSE)
-
-# example use:
-# test_vars <- c('confers_benefits',
-#                'confers_benefit_kin',
-#                'opaque',
-#                'secretive_knowledge',
-#                'uncommon_serious',
-#                'patronage_based_efficacy',
-#                'reputation_efficacy',
-#                'experts_compete')
-# value <- 1
-# model_support(test_vars, value, df)  # single model
-# model_totals <- function(test_vars, df, culture_key)   # full evidence for, absence, and against
-# model_totals(test_vars, df, culture_key)
 
 # document term matrix ----------------------------------------------------
 
@@ -373,9 +245,6 @@ texrec_length <- expert_words %>%
   summarise(
     numwords=length(word)
   )
-# avg_texrec <- mean(texrec_length$numwords)
-# sd_texrec <- sd(texrec_length$numwords)
-# median_texrec <- median(texrec_length$numwords)
 
 docterm <-
   expert_words %>%
@@ -390,13 +259,7 @@ docterm <-
 
 # split main df to numeric here -------------------------------------------
 
-# num_df <- df   # NOTE: split df to numeric version here?
-# still undecided if this is the best approach
 coded_data <- df
-
-# expanding numeric to explicitly code certain categoricals ---------------
-# colnames(df)[sapply(df, is.character)]
-## sex, age, etc.
 df$male <- 0
 df$male[df$sex=='male' | df$sex=='either/both'] <- 1
 df$female <- 0
@@ -408,8 +271,6 @@ df$case[df$case_model=='case'] <- 1
 df$model[df$case_model=='model'] <- 1
 
 # starting iterations on cats to numeric ----------------------------------
-
-## First: setting up names to iterate over
 
 # Age variables to numeric cols
 agelist <- names(table(age_data$age))
@@ -459,10 +320,7 @@ names(statlist) <- unlist(lapply(
 names(statlist) <- paste0('status_', names(statlist))
 # prescribed, patronage basis, learned, status
 
-## Second: iterating over those name lists
-
 # Age iteration
-#df$child <- convertCatNumeric(cat_name='child', cat_var='age', cat_data=age_data, df)
 tmp2 <- data.frame(matrix(NA, nrow=nrow(df), ncol=length(agelist)))
 for(i in agelist){
   tmp2[which(agelist==i)] <- convertCatNumeric(cat_name=i, cat_var='age', cat_data=age_data, df)
@@ -507,17 +365,10 @@ colnames(tmp2) <- names(statlist)
 df <- cbind(df, tmp2)
 
 # Converting disability categories to numeric
-# table(df$disability)
 df$disabled_blind <- 0
 df$disabled_crippled <- 0
 df$disabled_blind[!is.na(df$disability)] <- 1
 df$disabled_crippled[df$disability=='blind, crippled'] <- 1
-
-# age_data <- reshapeDF('age', df)
-# learning_data <- reshapeDF('how_learned', df)
-# patron_data <- reshapeDF('patronage_based_cat', df)
-# status_data <- reshapeDF('how_gained_status', df)
-# prescribed_data <- reshapeDF('prescribed_behavior_cat', df)
 
 # constructing key dataframe ----------------------------------------------
 
@@ -545,26 +396,12 @@ coded_categorical <- df %>%
     male:disabled_crippled
   )
 
-# df$culture_id <- NULL
-# df$citation_id <- NULL
 text_data$culture_id <- NULL
 text_data$citation_id <- NULL
 
 cite_df$author_id <- NULL
 
 # overwrite with usethis --------------------------------------------------
-
-# central_key
-# coded_data
-# coded_categorical
-# # author_data
-# cite_data <- cite_df
-# culture_data <- culture_df
-# docterm
-# domain_data
-# expert_words
-# texrec_length
-# text_data
 
 cite_data <- cite_df
 culture_data <- culture_df
@@ -579,24 +416,4 @@ usethis::use_data(domain_data, overwrite=TRUE)
 usethis::use_data(expert_words, overwrite=TRUE)
 usethis::use_data(texrec_length, overwrite=TRUE)
 usethis::use_data(text_data, overwrite=TRUE)
-
-# wide_data <- df
-# cite_data <- cite_df
-# culture_data <- culture_df
-
-# usethis::use_data(data, overwrite=TRUE)
-# usethis::use_data(long_data, overwrite=TRUE)
-# usethis::use_data(cite_data, overwrite=TRUE)
-# usethis::use_data(culture_data, overwrite=TRUE)
-# usethis::use_data(text_data, overwrite=TRUE)
-# usethis::use_data(age_data, overwrite=TRUE)
-# usethis::use_data(domain_data, overwrite=TRUE)
-# usethis::use_data(learning_data, overwrite=TRUE)
-# usethis::use_data(status_data, overwrite=TRUE)
-# usethis::use_data(patron_data, overwrite=TRUE)
-# usethis::use_data(prescribed_data, overwrite=TRUE)
-# usethis::use_data(culture_key, overwrite=TRUE)
-# usethis::use_data(docterm, overwrite=TRUE)
-# usethis::use_data(texrec_length, overwrite=TRUE)
-# usethis::use_data(expert_words, overwrite=TRUE)
 
