@@ -1,13 +1,13 @@
 {
-    "path" : "~/Documents/sciExpertiseHRAFdb/data-raw",
-    "sortOrder" : [
+    "path": "~/Documents/sciExpertiseHRAFdb/data-raw",
+    "sortOrder": [
         {
-            "ascending" : false,
-            "columnIndex" : 4
+            "columnIndex": 4,
+            "ascending": false
         },
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }

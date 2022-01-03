@@ -1,0 +1,244 @@
+
+--C: Akan
+
+--d
+600
+
+--x
+Clark, Gracia. 1994. Onions Are My Husband: Survival and Accumulation by West African Market Women. Chicago: University of Chicago Press.
+
+--g
+96
+
+--p
+Even the fundamental principle of matriliny, allegiance to the mother's kin, was voided in highly hierarchical situations before conquest. The most ancient and honorable exception applied to the asomfo, the courtiers and servants of the Asantehene and, by extension, the Asante state. These men were expressly given control of their own children, directly canceling the power of the maternal uncle, so that they could train their own sons without interference as skilled successors [Page 97] to their technical and political offices. Interestingly enough, although these rules applied to substantial numbers of Kumasi residents before conquest, and I knew a few traders with family connections to the palace, none of them mentioned the asomfo pattern among marital alternatives. Patrifiliation through slave wives came up more often as a means for wealthy commoner men to gain wives and children with primary loyalty to them, not matrilineal kin. A wealthier man could also acquire pawned wives, who could not work for themselves or go home. Most market women I knew had neither the wealth nor the close royal connections to aspire to elite standards of behavior, so the less hierarchical models had more relevance.
+
+--cm
+Slavery (567)
+Mode of marriage (583)
+Lineages (613)
+Executive household (644)
+
+--d
+601
+
+--x
+Ffoulkes, Arthur. 1909. “Fanti Marriage Customs.” Journal of the African Society Vol. VIII: 31–48.
+
+--g
+31
+
+--p
+I intend to deal only with the native custom, and I may here state that I have always relied rather on illiterate natives and chiefs, for my information, than on educated native men, for the following reasons:—the illiterate native tells one all he knows, or all he dares, and, having no reason to lie when he is not in court, he generally relates facts. A chief is the judge of his people, and, with his councillors, is the repository and exponent of the law, and must necessarily be taken as an expert. The scholar studies anything but his own customs, while an educated native is too inclined to embellish those customs, and present them in a form that would do credit to Justinian.
+
+--cm
+Interviewing in research (124)
+Regulation of marriage (582)
+
+--C: Kanuri
+
+--d
+602
+
+--x
+Cohen, Ronald. 1971. “Dominance and Defiance: A Study of Marital Instability in an Islamic African Society.” In Anthropological Studies, ix, 213. Washington, D.C.: American Anthropological Association.
+
+--g
+71
+
+--p
+Charity Marriage . Another type of marriage, almost always performed with a fero, is called nyia sada’abe or marriage of charity. In such a union, most of the bridewealth and other marriage expenses are waived and the girl is given to the husband by those having authority over her marriage dispensation rights. In most cases, these marriages are with mallams or religious practitioners, and the marriage is considered an act of charity by the girl’s family bringing honor upon the family. Or again, a man may wish to express his gratitude to a mallam for supernatural aid having to do with medicine, prayers, or divination used by the practitioner for the benefit of the group bestowing the girl. In the same way, most individuals having power to bestow a girl would hesitate before refusing the request of a mallam because of the general awe in which he and his supernatural powers are held in the public eye. This is also a reason for not giving girls to mallams . For if anything should go wrong with the marriage and produce dissatisfaction on the part of the mallam, his powers of retaliation are very great.
+
+--cm
+Mode of marriage (583)
+Priesthood (793)
+
+--d
+603
+
+--x
+Cohen, Ronald. 1971. “Dominance and Defiance: A Study of Marital Instability in an Islamic African Society.” In Anthropological Studies, ix, 213. Washington, D.C.: American Anthropological Association.
+
+--g
+83
+
+--p
+Between the kwororam meeting and the wedding, the groom usually sends small presents to the girl and her close household relatives. In this period as well, he appoints his “best man” and “best woman.” The best man or so ba kura (chief friend) will act as his chief intermediary in making all arrangements with religious practitioners and other community members, as well as with the girl’s male relatives, especially her luwali . Both of these persons also arrange for messages to be sent to [Page 84] all relatives and friends of the groom telling the date and place of the wedding. Today in the city, this often means having invitations printed which are then sent out by messenger. The best man also arranges for the means of conveying the girl from her house to the groom’s. In rural areas, conveyance is by horse or camel. In the city, it is almost customary today to rent a car. The best man must also arrange for a special ceremony (the kolawa ) to be performed if this is the first wedding of the groom to a previously unmarried girl. The “best woman,” usually a senior female relative, often a father’s sister, acts as his intermediary with the women participants. The reason given for these aides is that the groom must maintain calm good relations during this period. To carry out all of the necessary negotiations himself could easily produce conflict on his part which might adversely affect the orderly progression of events leading to the completion of the marriage ceremony.
+
+--cm
+Gift giving (431)
+Animal transport (492)
+Vehicles (493)
+Arranging a marriage (584)
+
+--C: Tiv
+
+--d
+604
+
+--x
+Bohannan, Paul, and Laura Bohannan. 1968. “Tiv Economy.” In African Studies, viii, 265. Evanston [Ill.]: Northwestern University Press.
+
+--g
+238
+
+--p
+TIV NOTIONS of payment elucidate the matter more fully. The English verb “to pay” covers two Tiv verbs: kimbi and nambe . If we oversimplify for a moment, we can say that kimbi means to pay for goods, while nambe means to pay for services. 3 Within the subsistence sphere, I kimbi a bundle of guinea corn for a hoe, or I kimbi spinach greens for mushrooms. Within the prestige sphere, I kimbi brass rods for a cow. But, still within the prestige sphere, I nambe the akombo practitioner who performs rites for my benefit though I kimbi him (or anyone else) for the medicine he gives me. Within the marriage sphere of exchange the word kimbi is never used. I nambe my wife’s guardian by giving him rights in my ward. If I do not have a ward, I nambe him in brass rods until I have a daughter to give him as his ward, thus ensuring that I nambe him properly.
+
+--cm
+Material not relevant (000)
+Administration (429)
+Exchange transactions (437)
+Accumulation of wealth (556)
+Mode of marriage (583)
+
+--C: Taiwan Hokkien
+
+--d
+605
+
+--x
+Diamond, Norma. 1969. “Kʻun Shen; a Taiwan Village.” In Case Studies in Cultural Anthropology, 12, 111. New York: Holt, Rinehart and Winston.
+
+--g
+51
+
+--p
+The suitability of the match is decided by matching the horoscopes of the two young people, either by consulting a specialist in the city or by presenting the horoscopes at the village temple and soliciting an opinion from the village gods. If the answer is favorable, the families begin negotiations in earnest, with each stage in the negotiations marked by an exchange of gifts. The engagement is formally marked by an exchange of rings as well as the sending of a small sum of money to the girl's family. If the girl's family has wealth, the boy's house also sends some ceremonial cakes; if her family is poor, this is usually ignored. The matchmaker receives her first fees at this point: about $ 60 NT from the boy's family, and $ 40 NT from the girl's family.
+
+--cm
+Mode of marriage (583)
+Revelation and divination (787)
+
+--d
+606
+
+--x
+Wolf, Margery. 1972. Women and the Family in Rural Taiwan. Stanford, Calif.: Stanford University Press.
+
+--g
+117
+
+--p
+If the young people do not turn down the match after their formal introduction, and the two families find nothing prejudicial about each other, the next official step is “exchanging the eight characters.” The year, month, day, and hour of birth of the boy and the girl are written on red cards and exchanged. Each family places the card it received from the other family on its ancestral altar for three days to obtain the opinion of the family's ancestors and any gods who might be on the altar. A negative opinion is expressed by the death of a domestic animal, a family quarrel, an illness, something being broken or lost, or any other minor or major domestic tragedy. If either family decides for any reason that it does not wish to continue negotiations, a dropped rice bowl provides a simple solution that cannot offend anyone. There are still families who take such portents very seriously, keeping a complete record of any unusual events during this period, carefully questioning their meaning with the help of a fortuneteller, the priest in the temple, and inquiries of the gods on their domestic altar. If nothing untoward has happened at the end of three days, the girl's family takes both sets of eight characters to a fortuneteller to discover from his calculations how well suited the couple are to each other. Knowledgeable and cautious families have corrected in so far as possible any “errors” of birth that might make it difficult for their daughter to marry, changing the time or date to a more agreeable combination. But there is little they can do about a girl born in the Year of the Tiger, which makes her dangerous to people in particular ritual states, or in, say, the “broken months” (the third, sixth, and ninth), which indicate that her carelessness and clumsiness will bring endless small misfortunes to those around her. Moreover, even a family that has [Page 118] managed to register its daughter's birth on a good day in a good month at a good hour may find that her characters combine badly with the boy's, or that if she marries in this, her nineteenth (or whichever), year, she will bring on bad luck. One young woman we knew in Peihotien idly visited a fortuneteller only to be told that because she was so pretty she must either marry before she reached nineteen or “pay her flower debt” by working as a prostitute for a set number of years. Needless to say, her mother found this reading entirely unacceptable (the girl was aproaching her twenty-first birthday) and hurried her off to a more agreeable fortuneteller, who discovered alternative ways of “paying the flower debt.”
+
+--cm
+Arranging a marriage (584)
+Revelation and divination (787)
+
+--d
+607
+
+--x
+Wolf, Margery. 1972. Women and the Family in Rural Taiwan. Stanford, Calif.: Stanford University Press.
+
+--g
+124
+
+--p
+When the negotiations are nearly complete, the eight characters [Page 125] are again submitted to a fortuneteller or other specialist to calculate a date that is “fortunate” for both parties. This is, incidentally, another reason why girls born in the Year of the Tiger or on other “bad” dates are such a nuisance. Not only are they in some cases a ritual danger to others, they also have so few “good” days that it is difficult to find a day on which they can be safely engaged, married, or even buried. I suspect that the go-between often uses the setting of the date for the engagement ceremony as a ploy to accelerate lagging negotiations and soften up firm positions taken by either or both sides.
+
+--cm
+Arranging a marriage (584)
+Revelation and divination (787)
+
+--C: Tlingit
+
+--d
+608
+
+--x
+Klein, Laura F. (Frances). 1988. Tlingit Women and Town Politics. Ann Arbor, Michigan: Xerox University Microfilms.
+
+--g
+203
+
+--p
+Matrilineal kinship is most important today in ritual, in marriage, and in symbol. Ritual involves the clan unit and clan heads take active, or at least, titular command. This is the only area where the traditional “chiefs” publicly take precedence. All the current “chiefs” and leaders, who have not formally taken the position of “chief,” are men and the position is seen as a man’s position. Women take active [Page 204] part in the organization and execution of all clan events but do not take the “chief’s” role. No chief holds town or association office but they do support individuals for office. Their influence even here is that of the individual rather than that of the position of chief. The individuals holding positions as chief, are characteristically different than those holding modern political office. The chiefs are usually older men and specialists in the customs and attitudes of the “old tradition.” Their major skills are organizing a potlatch and making wise traditional judgements in leaborate speeches. The modern politician, on the other hand, is a younger person and must be knowledgeable in Western-type skills such as use of Robert’s Rules of Order and finding and getting federal and private grants. The two types of leaders live side by side and show mutual respect. Their areas of interest and influence are quite different. In marriage selection, the rules of matriliny still have some power. It is the rule of moiety exogamy, rather than the leadership of clan elders, which operates here. Symbolically, matrilineal terms are widely used. As often as not, however, they are used to symbolize the unity of the Tlingit people, rather than the division into matrilineal units.
+
+--cm
+Sociocultural trends (178)
+Cultural identity and pride (186)
+Status, role, and prestige (554)
+Gender status (562)
+Regulation of marriage (582)
+Kinship terminology (601)
+Kin relationships (602)
+Clans (614)
+Moieties (616)
+
+--C: Aranda
+
+--d
+609
+
+--x
+Morton, John. 1992. “Country, People, Art: The Western Aranda 1870-1990.” In The Heritage of Namatjira : The Watercolourists of Central Australia, [23] – 62 , [4]  of plates. Port Melbourne, Victoria, Australia: William Heineman Australia.
+
+--g
+32-34
+
+--p
+[Preceded by descriptions of myths, taboos about naming after dead people, and sacred locations and historical knowledge.] All this is absolutely critical for the understanding of Western Aranda land ownership and cultural identity, since the same sacred sites that embody the dead as totemic ancestors also act as markers of countries. In any particular country there is a network of sacred sites and tracks made by several ancestral beings. For example, the Ellery Creek district, as it was defined and owned at the turn of the century was crossed by many ancestral tracks, including the major honey-ant track that came from Ljaba, outside of the Ellery Creek district in the north, then proceeding along Ellery Creek to Roulbmaulbma. Several lesser sacred sites lay along Ellery Creek to mark events from the honey-ant dreaming--places like Udepeta, Indotupa, Inbirilawuraka, Ntjankerama and Pmokoputa. In addition to these, there were sacred sites at Ragatia, commemorating the deeds of rain ancestors; Lalatuterelelaka, Tala and Alkuta Kara, commemorating events in a carpet snake story; and Alkutnama, the original mythical home of two cannibalistic eaglehawk brothers. Many other sites and tracks lay within the Ellery Creek district, but what made them belong specifically to that district was that the most secret and sacred knowledge pertaining to the myths was predominantly owned by an identifiable patrilineal clan consisting of men and women who held their [Page 34] knowledge by inheriting it from their fathers and paternal grandfathers and by having this inheritance reinforced by conception at local sites.
+On the other hand, this distribution of knowledge was not even: some male members of the group ( pmaragatnia ) knew more than others; some of the children of the female members of the group ( kutungula ) knew more than others; and a few members of the group knew relatively little, actually knowing more about other countries, to which they felt themselves more [Page 35] attached. This illustrates a very important point about the constitution of the Western Aranda: no person belongs to any particular country simply by being conceived or born there, or by being related to people who previously held that country. Rather, belonging to a country is also a function of the possession of knowledge--and knowledge is not transmitted by conception or genetic inheritance, but by various media of communication. Moreover, this communication takes place in an elaborate and complex political field, with knowledgeable elders picking, choosing and favouring their main heirs to the disadvantage of others, who may thus become less powerful or influential people, or who may attempt to capitalise on their nominal rights in other areas. The fact that ownership of countries is based largely on religious ideas and links of kinship and marriage does not mean that it lies beyond political negotiation and competition. Indeed, it is quite evident that kinship networks, marriage alliances between families, and religious ideas and values are the very stuff of politics among the Western Aranda.
+
+--cm
+Identification (101)
+Maps (102)
+Location (131)
+Incorporeal property (424)
+Routes (487)
+Mythology (773)
+Sacred objects and places (778)
+Incorporeal property (424)
+Personal names (551)
+Life and death (761)
+Mythology (773)
+Real property (423)
+Incorporeal property (424)
+Basis of marriage (581)
+Kin relationships (602)
+Tribe and nation (619)
+Territorial hierarchy (631)
+
+--C: Tikopia
+
+--d
+610
+
+--x
+Firth, Raymond. 1937. “Tatooing in Tikopia.” Man Vol. 36: 173–77.
+
+--g
+176
+
+--p
+Payment is made to the tattooer. It is termed te fakakai [unknown]a tau , ‘the sharpening of the tattooing,’ [Page p. 176 (b)] and is regarded as a recompense for the work involved. Each day that the tattooing takes place the immediate kinsfolk of the patient prepare the oven and carry food to the house of the expert, with some areca nut or tobacco. When the work is done the patient goes and cultivates for a day in the orchard of the expert, making him a present of this labour. A ritual gift of the type known as maro is also prepared. It consists of a pandanus mat, a sheet of white bark-cloth, a piece of orange bark-cloth and a number of pieces of ordinary bark-cloth--ten or so.
+
+--cm
+Body alterations (304)
+Gift giving (431)
+Exchange transactions (437)
+Regulation of marriage (582)
+
+--C: Tukano
+
+--d
+611
+
+--x
+Arhem, Kaj. 1981. “Makuna Social Organization: A Study in Descent, Alliance, and the Formation of Corporate Groups in the North-Western Amazon.” In Uppsala Studies in Cultural Anthropology, 379. Uppsala: Academiae Upsaliensis ; Distributed by Almqvist &Wiksell International.
+
+--g
+11
+
+--p
+In many ways, Roberto’s marriage reveals the political dimension of Makuna marriage. First, by being a powerful ritual specialist, Roberto had political influence and social prestige in society. Therefore, he could claim a woman in exchange for his ritual services. Secondly, he knew well that Eulalia was the only child of an old, widowed and remarried man in the headwaters area of the Goya stream. His name was Yose (416). He belonged to the numerically small Minowaringana sib. He had no close relatives and not a single, male sib-mate in the Komeña territory. Hence there was nobody to oppose Roberto’s claim or to defend Yose and his daughter’s interests. And Alberto, who indeed cared for Eulalia as for a proper sister, was indebted to Roberto and dependent upon his ritual services. So they could do nothing but accept the marriage. In this way, Roberto took Eulalia as his second wife and became one of the few polygynous men in the territory.
+
+--cm
+Life history materials (159)
+Status, role, and prestige (554)
+Arranging a marriage (584)
+Polygamy (595)
+Shamans and psychotherapists (756)
+
